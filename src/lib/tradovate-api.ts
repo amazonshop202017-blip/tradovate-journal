@@ -1,14 +1,15 @@
-// Tradovate API client — calls Tradovate directly from the browser.
-// If CORS blocks requests, deploy behind a Vercel rewrite proxy.
+// Tradovate API client — routes through Vercel rewrite proxy to avoid CORS.
+// In dev (Lovable preview), calls Tradovate directly as a fallback.
 
 const TRADOVATE_CID = 8;
 const TRADOVATE_SEC = "f03741b6-f634-48d6-9308-c8fb871150c2";
 const TRADOVATE_APP_ID = "Sample App";
 const TRADOVATE_APP_VERSION = "1.0";
 
+// Proxy paths (Vercel rewrites these to Tradovate)
 const BASE_URLS = {
-  demo: "https://demo.tradovateapi.com/v1",
-  live: "https://live.tradovateapi.com/v1",
+  demo: "/api/tradovate/demo",
+  live: "/api/tradovate/live",
 } as const;
 
 export type Environment = "demo" | "live";
