@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/tradovate/demo/:path*",
+      "destination": "https://demo.tradovateapi.com/v1/:path*"
+    },
+    {
+      "source": "/api/tradovate/live/:path*",
+      "destination": "https://live.tradovateapi.com/v1/:path*"
+    }
+  ]
+}
