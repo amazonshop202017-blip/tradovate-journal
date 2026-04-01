@@ -15,6 +15,9 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        terminal: "bg-primary text-primary-foreground hover:bg-primary/80 uppercase tracking-[0.15em] font-semibold terminal-glow",
+        "terminal-outline": "border border-primary/30 text-primary hover:bg-primary/10 uppercase tracking-[0.15em]",
+        "terminal-danger": "border border-destructive/30 text-destructive hover:bg-destructive/10 uppercase tracking-[0.15em]",
       },
       size: {
         default: "h-10 px-4 py-2",
